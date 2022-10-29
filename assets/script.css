@@ -1,0 +1,7 @@
+ box{
+    display:-flexbox;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    text-decoration-color white; 
+}

@@ -4,40 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="styles/debug.css">
+    <link rel="stylesheet" href="./assets/script.css">
     <title>Weather Beetle</title>
 </head>
 <body>
     <main>
-        <h1 class="title rounded is-blue is-3"  >Weather Dashboard</h1>
-        <div class= "time" id= "currentDay"> </>
+        <div class="hero">
+
+        </div>
+        <h1 class="hero"  >Weather Dashboard</h1>
+        
+        <!-- <input type="text" name="city location" id="city name"> -->
         
     </main>
-        <section class="section">
+        
+    <section class="section">
         <div class="container">
             <div class="block">
-                <h2 class="subtitle"></h2>
+                <h2 class="subtitle">Search for a city</h2>
                 <input class="input type="text" placeholder ="Text input">
-                <span class=" "icon is-medium is-left></span>
-                <h2></h2>
-                <h3></h3>
-        </div>
-            <div class="column" >
-                <div class="column">
-                column 1
+                <button type="submit">Search</button>
+                <div class="currentDay">
+                    <div class= "time" id= "currentDay"> </>
+                    <div class="current" value =""></div>
+                    <div class="temp" value =""></div>
+                    <div class="wind" value =""></div>
+                    <div class="humidity" value =""></div>
+                   
                 </div>
-                <div class="column">
+                
+                
+        </div>
+            <div class="container" >
+                <h3>5- Day Forecast:</h3>
+                <div class="column 1">
+                    <div class="current" value =""></div>
+                    <div class="temp" value =""></div>
+                    <div class="wind" value =""></div>
+                    <div class="humidity" value =""></div>
+                   
+                </div>
+                <div class="column 2">
                     column 2
                 </div>
-                <div class="column">
+                <div class="column 3">
                     column 3
                 </div>
-                <div class="column">
+                <div class="column 4">
                     column 4
                 </div>
-                <div class="column">
+                <div class="column 5">
                     column 5
                 </div>
             </div>
@@ -45,6 +61,7 @@
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"> </script>
 </body>
 </html>

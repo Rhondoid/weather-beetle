@@ -5,9 +5,12 @@
 // //construct query url to make API call
 // //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
-// var currentDay= moment(moment()).format('MMM Do YYY h:mm:ss a')
-// console.log(moment())
 
+const today=moment();
+$("#currentDay").text(today.format('MMMM Do YYYY'));
+console.log(moment())
+var searchForCities="cities"
+cityEl.addEventlistenerdocument.getElementById("city")
 
 // var cityEl="city";
 // var appId= "key";
