@@ -9,10 +9,17 @@
 const today=moment();
 $("#currentDay").text(today.format('MMMM Do YYYY'));
 console.log(moment())
-var searchForCities="cities"
-cityEl.addEventlistenerdocument.getElementById("city")
 
-// var cityEl="city";
+var searchForACity="city"
+cityEl = document.getElementById("city")
+console.log(
+
+)
+var day
+var temperature
+var wind
+var humidity
+
 // var appId= "key";
 // var queryURL = "http://api.openweathermap.org/data/2.5/weather?q= " + city + "&appid=" + APIKey;
 
@@ -21,3 +28,4 @@ cityEl.addEventlistenerdocument.getElementById("city")
 
 
 // // }
+// localStorage.setItem

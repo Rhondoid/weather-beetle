@@ -1,7 +1,22 @@
- box{
-    display:-flexbox;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    text-decoration-color white; 
+
+ main{
+    text-align: center; 
+    background-color: darkblue;
+    color: white;
+    align-content: space-evenly;
+ 
 }
+.container{
+    display:flex;
+    box-sizing: border-box;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    border-radius: solid; 50xp;
+    background-color: aquamarine;
+}
+
+
+/* future-container{
+    align-items: stretch;
+} */
