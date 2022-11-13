@@ -29,7 +29,7 @@ function callLatQuestionMark() {
 }
 
 // event listener should invoke callLatQuestionMark function on submit button
-callLatQuestionMark().addEventListener('click', e => {
+callLatQuestionMark().addEventListener('click', e => {'submit'
   console.log(e)
 })
  
