@@ -4,13 +4,14 @@
 // //Use local storage-localStorage.setItem('textArea);
 // //construct query url to make API call
 // //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-
+//add lat and lon variables to define
 var APIKey = "7df31ef07a9daa898e410e6debc655f9";
+const button = document.querySelector(".city");
+var callLocation = ["lat", "lon"];
 
-
-
+//work on Fetch request error to function
 function callLatQuestionMark() {
-  var city = "Clearwater";
+  const city = "city";
   var queryURL =
     "http://api.openweathermap.org/data/2.5/weather?q= " +
     city +
@@ -21,7 +22,7 @@ function callLatQuestionMark() {
       return response.json();
     })
     .then((result) => {
-     callLatQuestionMarkTwo(result.coord.lon, result.coord.lat)
+      callLocationTwo(result.coord.lon, result.coord.lat);
       //console.log(lat, lon)
       // callLatQuestionMark(lat, lon);
       console.log(result);
@@ -29,10 +30,10 @@ function callLatQuestionMark() {
 }
 
 // event listener should invoke callLatQuestionMark function on submit button
-callLatQuestionMark().addEventListener('click', e => {'submit'
-  console.log(e)
-})
- 
+// document.querySelector('city' ('click', e => {'submit'
+//   console.log(e)
+// })
+button.addEventListener("click", callLatQuestionMark);
 
 function callLatQuestionMarkTwo(lat, lon) {
   var queryUrlFiveDay = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKey}`;
@@ -42,40 +43,31 @@ function callLatQuestionMarkTwo(lat, lon) {
       return response.json();
     })
     .then((result) => {
-        displayFiveDays(result.list)
+      displayFiveDays(result.list);
       console.log(result);
     });
 }
 
 function displayFiveDays(arrayOfTimes) {
+  for (let i = 0; i < arrayOfTimes.length; i++) {
+    const newDate = new Date(arrayOfTimes[i].dt * 1000);
 
-    for (let i =0; i < arrayOfTimes.length; i++) {
-        const newDate = new Date(arrayOfTimes[i].dt*1000)
-        
-        // gets us the weather at 1400 for the next 5 days
-        if (newDate.getHours() === 14) {
-         const weatherOfDay = arrayOfTimes[i]
-         console.log(weatherOfDay)
-            // In this block you need to dynamically add content onto your page ei document.createElement / append etc
-          const resultList ={
-            temp:"",
-            wind:"",
-            humidity:"",
-
-          };
-
-
-
-
-            
-        }
-        
-        //console.log(arrayOfTimes[i])
+    // gets us the weather at 1400 for the next 5 days
+    if (newDate.getHours() === 14) {
+      const weatherOfDay = arrayOfTimes[i];
+      console.log(weatherOfDay);
+      // In this block you need to dynamically add content onto your page ei document.createElement / append etc
+      const resultList = {
+        temp: "",
+        wind: "",
+        humidity: "",
+      };
     }
 
-
+    //console.log(arrayOfTimes[i])
+  }
 }
- 
+
 //const today=moment();
 //$("#currentDay").text(today.format('MMMM Do YYYY'));
 //console.log(moment())
