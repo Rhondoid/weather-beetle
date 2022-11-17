@@ -10,7 +10,7 @@ const button = document.querySelector(".city");
 var callLocation = ["lat", "lon"];
 
 //work on Fetch request error to function
-function callLatQuestionMark() {
+function callLocation() {
   const city = "city";
   var queryURL =
     "http://api.openweathermap.org/data/2.5/weather?q= " +
@@ -33,9 +33,9 @@ function callLatQuestionMark() {
 // document.querySelector('city' ('click', e => {'submit'
 //   console.log(e)
 // })
-button.addEventListener("click", callLatQuestionMark);
+button.addEventListener("click", callLocation)
 
-function callLatQuestionMarkTwo(lat, lon) {
+function callLocationTwo(lat, lon) {
   var queryUrlFiveDay = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKey}`;
   // var queryUrlFiveDay = ""
   fetch(queryUrlFiveDay)
@@ -64,7 +64,7 @@ function displayFiveDays(arrayOfTimes) {
       };
     }
 
-    //console.log(arrayOfTimes[i])
+    console.log(arrayOfTimes[i])
   }
 }
 
