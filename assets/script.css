@@ -6,7 +6,7 @@
     align-content: space-evenly;
  
 }
-.container{
+.todaysWeather{
     display:flex;
     box-sizing: border-box;
     height: 50px;
@@ -14,6 +14,10 @@
     text-align: center;
     border-radius: solid; 50xp;
     background-color: white;
+}
+
+.day-1{
+
 }
 
 

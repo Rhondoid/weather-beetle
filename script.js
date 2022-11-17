@@ -6,12 +6,14 @@
 // //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 //add lat and lon variables to define
 var APIKey = "7df31ef07a9daa898e410e6debc655f9";
-const button = document.querySelector(".city");
+const cityInputEl = document.getElementById("cityInput");
 var callLocation = ["lat", "lon"];
-
+var userFormEl = document.getElementById("user-form");
 //work on Fetch request error to function
-function callLocation() {
-  const city = "city";
+var callLocation = function (event) {
+  event.preventDefault();
+  var city = cityInputEl.value.trim();
+  console.log(city);
   var queryURL =
     "http://api.openweathermap.org/data/2.5/weather?q= " +
     city +
@@ -27,14 +29,12 @@ function callLocation() {
       // callLatQuestionMark(lat, lon);
       console.log(result);
     });
-}
+};
 
-// event listener should invoke callLatQuestionMark function on submit button
-// document.querySelector('city' ('click', e => {'submit'
-//   console.log(e)
-// })
-button.addEventListener("click", callLocation)
+//utilizing the form and submit button
+userFormEl.addEventListener("submit", callLocation);
 
+//this gets the longitude and latitude
 function callLocationTwo(lat, lon) {
   var queryUrlFiveDay = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKey}`;
   // var queryUrlFiveDay = ""
@@ -56,44 +56,26 @@ function displayFiveDays(arrayOfTimes) {
     if (newDate.getHours() === 14) {
       const weatherOfDay = arrayOfTimes[i];
       console.log(weatherOfDay);
-      // In this block you need to dynamically add content onto your page ei document.createElement / append etc
-      const resultList = {
-        temp: "",
-        wind: "",
-        humidity: "",
-      };
-    }
+      // In this block I need to dynamically add content onto the page ei document.createElement / append etc
+    //   const todaysWeather = document.createElement("todaysWeather")
+    //   {
+    //     image:"";
+    //     temp: "",
+    //     wind: "",
+    //     humidity: "",
+    //   };
+    //   const day1El = document.createTextNode("Today's weather");
+    //   todaysWeather.appendChild(day1El);
+    //   console.log(day1El);
+    // }
 
     console.log(arrayOfTimes[i])
   }
 }
 
-//const today=moment();
-//$("#currentDay").text(today.format('MMMM Do YYYY'));
-//console.log(moment())
-//const weatherURL = 'http://api.openweathermap.org/data/2.5/weather?q=7df31ef07a9daa898e410e6debc655f9'
-//console.log()
-
-//Variables for location
-//var location = document.getElementById("lon,lat")
-//console.log("lon,lat")
-
-//navigator.geolocation.getCurrentLocation(getLatLon);
-//var latitude = location.coords.latitude;
-//var longitude = location.coords.longitude;
-//function getLatLon(location) {
-//console.log(latitude);
-//}
-// var location ="longitude, latitude"
-// console.log(location)
-// var day
-// var temperature
-// var wind
-// var humidity
-// cityEl.
-// }
-
-// // fetch(queryURL){
-
-// // }
-// localStorage.setItem
+// const today=moment();
+// $("#currentDay").text(today.format('MMMM Do YYYY'));
+// console.log(moment())
+// const weatherURL = 'http://api.openweathermap.org/data/2.5/weather?q=7df31ef07a9daa898e410e6debc655f9'
+// console.log()
+// localStorage.setItem;
