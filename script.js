@@ -9,7 +9,7 @@ var APIKey = "7df31ef07a9daa898e410e6debc655f9";
 const cityInputEl = document.getElementById("cityInput");
 var callLocation = ["lat", "lon"];
 var userFormEl = document.getElementById("user-form");
-//work on Fetch request error to function
+
 var callLocation = function (event) {
   event.preventDefault();
   var city = cityInputEl.value.trim();
@@ -52,22 +52,23 @@ function displayFiveDays(arrayOfTimes) {
   for (let i = 0; i < arrayOfTimes.length; i++) {
     const newDate = new Date(arrayOfTimes[i].dt * 1000);
 
-    // gets us the weather at 1400 for the next 5 days
+    // gets the weather at 1400 for the next 5 days
     if (newDate.getHours() === 14) {
       const weatherOfDay = arrayOfTimes[i];
       console.log(weatherOfDay);
-      // In this block I need to dynamically add content onto the page ei document.createElement / append etc
-    //   const todaysWeather = document.createElement("todaysWeather")
-    //   {
-    //     image:"";
-    //     temp: "",
-    //     wind: "",
-    //     humidity: "",
-    //   };
-    //   const day1El = document.createTextNode("Today's weather");
-    //   todaysWeather.appendChild(day1El);
-    //   console.log(day1El);
-    // }
+
+      // Add content onto the page ei document.createElement / append et
+      const todaysWeather = document.createElement("todaysWeather")
+      {
+        image:"";
+        temp: "";
+        wind: "";
+        humidity; "",
+      };
+      const day1El = document.createTextNode("Today's weather");
+      todaysWeather.appendChild(day1El);
+      console.log(day1El);
+    }
 
     console.log(arrayOfTimes[i])
   }
@@ -75,7 +76,4 @@ function displayFiveDays(arrayOfTimes) {
 
 // const today=moment();
 // $("#currentDay").text(today.format('MMMM Do YYYY'));
-// console.log(moment())
-// const weatherURL = 'http://api.openweathermap.org/data/2.5/weather?q=7df31ef07a9daa898e410e6debc655f9'
-// console.log()
 // localStorage.setItem;
