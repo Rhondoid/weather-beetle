@@ -6,11 +6,8 @@
 
 ## Installation
 
-
-
-## Usage
-
-
+![image](https://user-images.githubusercontent.com/110504360/205450933-e5ddd32f-f790-44ac-a825-a07cddd61287.png)
+https://rhondoid.github.io/weather-beetle/?
 
 ## License
 
