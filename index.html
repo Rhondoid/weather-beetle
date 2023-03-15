@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/script.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/script.css" />
     <title>Weather Beetle</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        
-        <h1 >Weather Dashboard</h1>
-        
+      <h1>Weather Dashboard</h1>
     </main>
-        
-    <section>
-        <div class="container-box">
-                <h2">Search for a city</h2>
-                
-                <div id="lon" id="lat"> </div>
-                <form id="user-form">
-                    <input id="cityInput" type="text">
-                    <button class="cityInputEl" type="submit">Submit</button>
-                </form>
-       </div>
-        <div class="todaysWeather">
-            <h3>5 Day Forecast:</h3>
-            <div class="today"> </div>
-            <div class="day-1">
-                <div class="image" value =""></div>
-                <div class="temp" value =""></div>
-                <div class="wind" value =""></div>
-                <div class="humidity" value =""></div>
-            </div>
 
-            <div class="day-2">
-                <div class="image" value =""></div>
-                <div class="temp" value =""></div>
-                <div class="wind" value =""></div>
-                <div class="humidity" value =""></div>
-            </div>
-            <div class="day-3">
-                <div class="image" value =""></div>
-                <div class="temp" value =""></div>
-                <div class="wind" value =""></div>
-                <div class="humidity" value =""></div>
-            </div>
-            <div class="day-4">
-                <div class="image" value =""></div>
-                <div class="temp" value =""></div>
-                <div class="wind" value =""></div>
-                <div class="humidity" value =""></div>
-            </div>
-            <div class="day-5">
-                <div class="image" value =""></div>
-                <div class="temp" value =""></div>
-                <div class="wind" value =""></div>
-                <div class="humidity" value =""></div>
-            </div>
+    <section>
+      <div class="container-box">
+        <h2>Search for a city</h2>
+
+        <div id="lon" id="lat"></div>
+        <form id="user-form">
+          <input id="cityInput" type="text" />
+          <button class="cityInputEl" type="submit">Searc</button>
+        </form>
+      </div>
+      <div class="todaysWeather">
+        <h2>Today's Weather:</h2>
+        <div class="today"></div>
+        <div class="day-1">
+          <img src="" alt="" />
+          <div class="temp" value=""></div>
+          <div class="wind" value=""></div>
+          <div class="humidity" value=""></div>
         </div>
+      </div>
+      <div class="5-dayForecast">
+        <h2>5 Day Forecast</h2>
+        <div class="day-2">
+          <div class="image" value=""></div>
+          <div class="temp" value=""></div>
+          <div class="wind" value=""></div>
+          <div class="humidity" value=""></div>
+        </div>
+        <div class="day-3">
+          <div class="image" value=""></div>
+          <div class="temp" value=""></div>
+          <div class="wind" value=""></div>
+          <div class="humidity" value=""></div>
+        </div>
+        <div class="day-4">
+          <div class="image" value=""></div>
+          <div class="temp" value=""></div>
+          <div class="wind" value=""></div>
+          <div class="humidity" value=""></div>
+        </div>
+        <div class="day-5">
+          <div class="image" value=""></div>
+          <div class="temp" value=""></div>
+          <div class="wind" value=""></div>
+          <div class="humidity" value=""></div>
+        </div>
+      </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="script.js"> </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

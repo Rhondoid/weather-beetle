@@ -14,11 +14,7 @@ var callLocation = function (event) {
   event.preventDefault();
   var city = cityInputEl.value.trim();
   console.log(city);
-  var queryURL =
-    "http://api.openweathermap.org/data/2.5/weather?q= " +
-    city +
-    "&appid=" +
-    APIKey;
+  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+APIKey;
   fetch(queryURL)
     .then((response) => {
       return response.json();
@@ -48,32 +44,35 @@ function callLocationTwo(lat, lon) {
     });
 }
 
-function displayFiveDays(arrayOfTimes) {
-  for (let i = 0; i < arrayOfTimes.length; i++) {
-    const newDate = new Date(arrayOfTimes[i].dt * 1000);
+// function displayFiveDays(arrayOfTimes) {
+//   for (let i = 0; i < arrayOfTimes.length; i++) {
+//     const newDate = new Date(arrayOfTimes[i].dt * 1000)};
 
-    // gets the weather at 1400 for the next 5 days
-    if (newDate.getHours() === 14) {
-      const weatherOfDay = arrayOfTimes[i];
-      console.log(weatherOfDay);
+//     // gets the weather at 1400 for the next 5 days
+//     if (newDate.getHours() === 14) {
+//       const weatherOfDay = arrayOfTimes[i];
+//       console.log(weatherOfDay);
+//     };
+//       // Add content onto the page ei document.createElement / append et
+//       const todaysWeather = {
+//         image: <img src="http://openweathermap.org/img/wn/${iconCode}@2x.png" alt="OpenWeatherMap image"/>,
+//         temp: "",
+//         wind: "",
+//         humidity: ""
+//       };
+      
+//       const weatherOfDay = arrayOfTimes[i];
+//       const iconCode = weatherOfDay.weather[0].icon;
+//       todaysWeather.image = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+      
+//       const day1El = document.createElement("img");
+//       day1El.src = todaysWeather.image;
+      
+//       todaysWeather.appendChild(day1El);
+//       console.log(day1El); 
+//     }
+// const today=moment(
+//   $("#currentDay").text(today.format('MMMM Do YYYY'))
+//   );
 
-      // Add content onto the page ei document.createElement / append et
-      const todaysWeather = document.createElement("todaysWeather")
-      {
-        image:"";
-        temp: "";
-        wind: "";
-        humidity; "",
-      };
-      const day1El = document.createTextNode("Today's weather");
-      todaysWeather.appendChild(day1El);
-      console.log(day1El);
-    }
-
-    console.log(arrayOfTimes[i])
-  }
-}
-
-// const today=moment();
-// $("#currentDay").text(today.format('MMMM Do YYYY'));
 // localStorage.setItem;
