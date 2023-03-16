@@ -3,18 +3,29 @@
 // // How to retrieve geographical coordinates given a city name
 // //Use local storage-localStorage.setItem('textArea);
 // //construct query url to make API call
-// //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+// //api.open weather map.org/data/2.5/weather?q={city name}&appid={API key}
 //add lat and lon variables to define
-var APIKey = "7df31ef07a9daa898e410e6debc655f9";
-const cityInputEl = document.getElementById("cityInput");
-var callLocation = ["lat", "lon"];
-var userFormEl = document.getElementById("user-form");
+
+// const cityInputEl = document.getElementById("cityInput");
+// var callLocation = ["lat", "lon"];
+// var userFormEl = document.getElementById("user-form");
+const searchForm = document.getElementById("search-form");
+const cityInput = document.getElementById("city-input");
+const cityName = document.getElementById("city-name");
+const temp = document.getElementById("temp");
+const wind = document.getElementById("wind");
+const humidity = document.getElementById("humidity");
+const fiveDayForecast = document.getElementById("fiveDayForecast");
+
+searchForm.addEventListener("submit", function(event){
+  event.preventDefault();
+  const city = cityInput.value.trim();
+  const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
+});
+
 
 var callLocation = function (event) {
-  event.preventDefault();
-  var city = cityInputEl.value.trim();
-  console.log(city);
-  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+APIKey;
+  var queryURL = 
   fetch(queryURL)
     .then((response) => {
       return response.json();
