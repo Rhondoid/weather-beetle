@@ -13,10 +13,28 @@
     align-items: flex-start;
   }
   
-  .todaysWeather,
-  .five-dayForecast {
+  /* currentWeather,
+  fiveDayForecast {
     flex-basis: calc(50% - 10px);
     margin-bottom: 20px;
+  } */
+  .day {
+    display: inline-block;
+    padding: 10px;
+    border: 1xp solid black;
+    border-radius: 5px;
+    background-color: lightblue;
+  }
+  .day p {
+    margin: 0;
+    font-size: 14px;
+  }
+  .day #temp {
+    font-weight: bold;
+  }
+  .day #wind 
+  .day #humidity{
+    font-style: italic;
   }
   
   @media (max-width: 768px) {

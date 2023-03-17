@@ -7,6 +7,7 @@ function handleSearch(event) {
   getWeather(cityName)
   
 }
+//gets weather for one day
 function getWeather(city){
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`;
     fetch(currentWeatherUrl).then(response => response.json()) .then(result =>{
@@ -20,6 +21,7 @@ function getWeather(city){
         getForecast(result.coord.lat, result.coord.lon)
     })
 }
+//gets weather for multiple days and time frame
 function getForecast(lat,lon){
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`
 fetch(forecastUrl).then(response => response.json()) .then(result =>{
@@ -33,16 +35,21 @@ fetch(forecastUrl).then(response => response.json()) .then(result =>{
             forecastArr.push(result.list[i])
         }
     }
+    //Creates multiple days
+    var html = ''
     console.log(forecastArr)
-    for(var i = 0; i<forecastArr.length; i++){
-        var htmlString = `<div class="day">
-        <div class="image" value=""></div>
-        <p>Temperature: <span id="temp">${forecastArr[i].main.temp}</span></p>
-        <p>Wind speed: <span id="wind">${forecastArr[i].wind.speed}</span></p>
-        <p>Humidity: <span id="humidity">${forecastArr[i].main.humidity}</span></p>
-      </div>`
-      document.getElementById("fore").appendChild(htmlString)
-    }
+  for (var i = 0; i < forecastArr.length; i++) {
+  html += `<div class="day">
+    <div class="image" value=""></div>
+    <p>Temperature: <span id="temp">${forecastArr[i].main.temp}</span></p>
+    <p>Wind speed: <span id="wind">${forecastArr[i].wind.speed}</span></p>
+    <p>Humidity: <span id="humidity">${forecastArr[i].main.humidity}</span></p>
+  </div>`
+  document.getElementById('fore').innerHTML = html
+}
+
 })
 }
 searchForm.addEventListener("submit", handleSearch);
+
+localStorage.setItem("lastSearch", cityName);
