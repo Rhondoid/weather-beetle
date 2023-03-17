@@ -1,19 +1,25 @@
 # weather-beetle
-#This is a 5 day weather forcast program
 
-##This is an application that will run in the browser to give updated weather information.
+  ## Description
+  This application was created to generate a team profile based on user input utilizing Inquirer and Node.js. This will display the information  by generating a new HTML page.
+
+ 
+  ## Motivation
+  I was motivated to create this application so I could view the current weather and a 5 day forecast for different cities. 
+  
+  ## Usage
+ ![image](https://user-images.githubusercontent.com/110504360/225783605-9bc1a8e9-87a7-4f2a-83e0-bc252c4950e9.png)
+  
+  ## Credits
+  Node.js, HTML, CSS, Javascript
+
+ 
+  ## License
+  This license is MIT
 
 
-## Installation
+ 
+  ## Contribute
+  If you have questions or would like to contribute, please contact me directly at rhonda.vandam@outlook.com
 
-![image](https://user-images.githubusercontent.com/110504360/205450933-e5ddd32f-f790-44ac-a825-a07cddd61287.png)
-https://rhondoid.github.io/weather-beetle/?
-
-## License
-
-MIT
-
-## How to Contribute
-
-If you would like to contribute you can email rhonda.vandam@outlook.com
 
